@@ -1,171 +1,144 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head>
+   <meta charset="utf-8" />
+  <title>Break&#39;s blog</title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <link rel="stylesheet" href="https://breaklj.github.io//styles/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+   <script src="https://cdn.staticfile.org/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+ </head>
+ <body>
+         <div class="sidebar animated fadeInDown">
+   <div class="logo-title">
+    <div class="title">
+     <img src="https://breaklj.github.io//images/avatar.png?v=1574433305439" style="width:127px;" />
+
+     <h3 title=""><a href="/">Break&#39;s blog</a></h3>
+
+     <div class="description">
+      <p>温故而知新</p>
+     </div>
+    </div>
+   </div>
+   <ul class="social-links">
+
+
     
-<meta charset="utf-8" >
 
-<title>Break&#39;s blog</title>
-<meta name="description" content="温故而知新">
+    
 
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://breaklj.github.io//favicon.ico?v=1574432610533">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link rel="stylesheet" href="https://breaklj.github.io//styles/main.css">
+    
 
+    
 
+    
 
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+    
 
+    
 
+    
 
-  </head>
-  <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://breaklj.github.io/">
-        <img class="avatar" src="https://breaklj.github.io//images/avatar.png?v=1574432610533" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://breaklj.github.io/">
-        <h1 class="site-title">Break&#39;s blog</h1>
-      </a>
+    
+
+   </ul>
+   <div class="footer">
+    <div class="by_farbox">
+   Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
     </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
+    
+
     </div>
+   </div>
   </div>
-</div>
+  <div class="main">
+          <div class="page-top animated fadeInDown">
+    <div class="nav">
 
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
-      
-        
-          <a href="/" class="menu purple-link">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="menu purple-link">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="menu purple-link">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="menu purple-link">
-            关于
-          </a>
-        
-      
+     <li><a  href="/">首页</a></li>
+
+     <li><a  href="/archives">归档</a></li>
+
+     <li><a  href="/tags">标签</a></li>
+
+     <li><a  href="/post/about">关于</a></li>
+
+
     </div>
-  </div>
-</transition>
-
-
-        <div class="content-container">
-          
-          
-
-<div class="archives-container">
-  
-    <h2 class="year">2019</h2>
-    
+    <div class="information">
+     <div class="back_btn">
+      <li><a class="fa fa-chevron-left" onclick="window.history.go(-1)" style="display:none;"> </a></li>
+     </div>
+    </div>
+   </div>
+   <div class="autopagerize_page_element">
+    <div class="content">
+     <div class="archive animated fadeInDown">
+      <ul class="list-with-title">
+       <div class="archive">
       
-        <article class="post">
-          <a href="https://breaklj.github.io//post/san-da">
-            <h2 class="post-title">
-              三大
-              <small>2019-11-22</small>
-            </h2>
-          </a>
-        </article>
       
-    
-      
-    
-  
-    <h2 class="year">2018</h2>
-    
-      
-    
-      
-        <article class="post">
-          <a href="https://breaklj.github.io//post/hello-gridea">
-            <h2 class="post-title">
-              Hello Gridea
-              <small>2018-12-12</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-  
-</div>
-
-
+        <div class="listing-title">
+                2019
         </div>
 
-        <div class="site-footer">
-  <div class="slogan">温故而知新</div>
-  <div class="social-container">
-    
-      
-        <a href="https://github.com/breaklj/" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      
-    
-      
-    
-      
-        <a href="https://weibo.com/u/2837437371/" target="_blank">
-          <i class="fab fa-weibo"></i>
-        </a>
-      
-    
-      
-        <a href="https://www.zhihu.com/people/lj5469" target="_blank">
-          <i class="fab fa-zhihu"></i>
-        </a>
-      
-    
-      
-    
-  </div>
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://breaklj.github.io//atom.xml" target="_blank">RSS</a>
-</div>
+        <ul class="listing">
 
+                
+                             
+         <div class="listing-item">
+          <div class="listing-post">
+           <a href="https://breaklj.github.io//post/san-da" title="三大">三大</a>
+           <div class="post-time">
+            <span class="date">2019-11-22 </span>
+           </div>
+          </div>
+         </div>
+         
+         
+                    
+         
+        </ul>
+        
+        <div class="listing-title">
+                2018
+        </div>
 
-      </div>
-      <script type="application/javascript">
+        <ul class="listing">
 
-hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
-
-</script>
-
-
-
-
+                
+                    
+         
+                             
+         <div class="listing-item">
+          <div class="listing-post">
+           <a href="https://breaklj.github.io//post/hello-gridea" title="Hello Gridea">Hello Gridea</a>
+           <div class="post-time">
+            <span class="date">2018-12-12 </span>
+           </div>
+          </div>
+         </div>
+         
+         
+        </ul>
+        	
+       </div>
+       <div class="pagination">
+        <ul class="clearfix"></ul>
+       </div>
+      </ul>
+     </div>
     </div>
-  </body>
+   </div>
+  </div>
+   <script src="https://breaklj.github.io//media/scripts/jquery.js"></script>
+  <script src="https://breaklj.github.io//media/scripts/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://breaklj.github.io//media/scripts/jquery.appear.js"></script>
+
+
+ </body>
 </html>
