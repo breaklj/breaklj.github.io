@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://breaklj.github.io/</id>
     <title>Break&apos;s blog</title>
-    <updated>2019-11-22T12:39:17.904Z</updated>
+    <updated>2019-11-22T12:43:35.577Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://breaklj.github.io/"/>
     <link rel="self" href="https://breaklj.github.io//atom.xml"/>
@@ -16,7 +16,7 @@
         <link href="https://breaklj.github.io//post/san-da">
         </link>
         <updated>2019-11-22T10:29:53.000Z</updated>
-        <content type="html"><![CDATA[<p>阿萨德啊的</p>
+        <content type="html"><![CDATA[<p>阿萨德啊的<img src="https://breaklj.github.io//post-images/1574426602815.jpg" alt=""></p>
 ]]></content>
     </entry>
     <entry>
