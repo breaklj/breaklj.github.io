@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://breaklj.github.io/</id>
     <title>Break&apos;s blog</title>
-    <updated>2019-11-22T10:24:49.875Z</updated>
+    <updated>2019-11-22T10:30:05.903Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://breaklj.github.io/"/>
     <link rel="self" href="https://breaklj.github.io//atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://breaklj.github.io//images/avatar.png</logo>
     <icon>https://breaklj.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, Break&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[三大]]></title>
+        <id>https://breaklj.github.io//post/san-da</id>
+        <link href="https://breaklj.github.io//post/san-da">
+        </link>
+        <updated>2019-11-22T10:29:53.000Z</updated>
+        <content type="html"><![CDATA[<p>阿萨德啊的</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://breaklj.github.io//post/hello-gridea</id>
