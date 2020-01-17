@@ -1864,7 +1864,7 @@ blockquote:before {
 .hljs-strong {
   font-weight: bold;
 }
-.blog-header {
+.header {
         width: 1000px;
         margin: 0 auto;
       }
@@ -1875,6 +1875,4 @@ blockquote:before {
       }
     body {
       background-color: #ffffff
-    }.mist .header {
-        background-color: transparent !important;
-      }
+    }
