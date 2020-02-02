@@ -1,51 +1,28 @@
-.section-box {
-  background-color: #fff;
+.pagination-ul {
+  padding: 10px 0;
 }
 
-.section-box.gemini {
-  background-color: transparent;
+.box-shadow-wrapper {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 -1px 0.5px 0 rgba(0, 0, 0, 0.09);
+}
+
+.tags-section {
+  height: 100%;
 }
 
 .section {
-  box-sizing: border-box;
-  width: auto;
   min-height: 700px;
-  box-shadow: initial;
   border-radius: initial;
-  padding: 40px;
   box-sizing: border-box;
-}
-
-.posts-expand {
-  padding-top: 40px;
-}
-
-.site-title a:hover {
-  color: #fff;
 }
 
 .site-nav {
-  margin: 20px 0;
+  padding: 20px 0;
   transition: all .3s linear;
 }
 
 .nav-item {
   opacity: 0;
-}
-
-
-.nav-item a:hover {
-  color: #222;
-}
-
-
-.nav-item-active {
-  background: #f9f9f9;
-}
-
-.nav-item:hover {
-  background: #f9f9f9;
-  color: rgba(0, 0, 0, 0.98);
 }
 
 .nav-toggle {
@@ -113,17 +90,19 @@
 .brand {
   display: inline-block;
   padding: 0 40px;
-  color: #fff;
-  background: #222;
   border-bottom: none;
   position: relative;
   top: -10px;
   opacity: 0;
+  color: #EEE;
+}
+
+.brand:hover {
+  color: #FFF;
 }
 
 .sidebar-wrapper {
   color: #555;
-  box-shadow: initial;
   border-radius: initial;
   padding: 20px 10px;
   box-sizing: border-box;
@@ -142,26 +121,24 @@
 .gemini {
   
 }
-.gemini .blog-header {
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+
+.gemini .post-page {
+  padding: 20px 40px;
 }
 
-.gemini .section {
-  padding: 0px;
+.gemini .article-wrapper {
+  padding: 20px;
 }
 
 .gemini .post {
-  padding: 40px;
-  margin-bottom: 12px;
-  background-color: #fff;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+  margin-bottom: 20px;
 }
 
 .gemini .section {
   width: auto;
 }
 
-.gemini .section-box {
+.gemini .section-box{
   box-sizing: border-box;
   width: calc(100% - 252px);
   min-height: 700px;
@@ -171,7 +148,6 @@
   position: relative;
   margin: 0 auto;
 }
-
 
 .gemini .section-layout-wrapper {
   margin: 0 auto;
@@ -186,28 +162,24 @@
   opacity: 0;
 }
 
-
-.gemini .sidebar-wrapper {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 -1px 0.5px 0 rgba(0, 0, 0, 0.09);
+.gemini .sidebar-box .sidebar-wrapper {
+  box-shadow: none;
 }
-
 
 .gemini .header li {
   list-style-type: none;
   line-height: 32px;
 }
 
-
 .gemini .blog-header {
   position: absolute;
+  overflow: hidden;
   top: 0;
   padding: 0;
   width: 240px;
-  background: #fff;
   border-radius: initial;
   z-index: 9999;
 }
-
 
 .gemini .site-title {
   display: inline-block;
@@ -221,8 +193,6 @@
 .gemini .site-meta {
   position: relative;
   padding: 20px 0;
-  color: #fff;
-  background: #222;
   text-align: center;
 }
 
@@ -237,7 +207,6 @@
   color: #ddd;
 }
 
-
 .gemini .nav-item-active a:after {
   content: " ";
   position: absolute;
@@ -249,11 +218,6 @@
   border-radius: 50%;
   background-color: #bbb;
   color: rgba(0, 0, 0, 0.98);
-}
-
-
-.gemini .sidebar-wrapper {
-  background: #fff;
 }
 
 .gemini .site-author-image {
@@ -270,10 +234,6 @@
   border: none;
   padding: 5px 20px;
   text-align: left;
-}
-
-@media (min-width: 992px) {
-
 }
 
 @media (max-width: 961px) {
@@ -296,16 +256,8 @@
     width: 100% !important;
   }
 
-  .section {
-    padding: 20px 20px;
-  }
-
   .gemini .section {
     margin: 0 !important;
-  }
-
-  .gemini .post {
-    padding: 10px 20px;
   }
 
   .nav-toggle {
@@ -313,6 +265,7 @@
   }
 
   .site-nav {
+    padding: 0px;
     height: 0px !important;
     margin: 0;
     overflow: hidden;
@@ -374,10 +327,26 @@
     margin: 10px;
   }
 
+  .gemini .nav-item-active a:after {
+    content: none;
+  }
+
+  .gemini .post-page {
+    padding: 10px;
+  }
+
+  .box-shadow-wrapper {
+    padding: 0px;
+  }
+
   .sidebar {
     display: none !important;
   }
 
+  .gemini .blog-header {
+    overflow: hidden;
+  }
+  
   .header {
     width: auto !important;
   }
@@ -389,10 +358,6 @@
 
   .nav-toggle {
     display: inline-block;
-  }
-
-  .gemini .blog-header {
-    overflow: hidden;
   }
 
   .section-layout-wrapper {
