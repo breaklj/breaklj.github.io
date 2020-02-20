@@ -1906,6 +1906,9 @@ body {
     }
     .next-md-body h1, .next-md-body h2 {
       border-bottom-color: #555;
+    }
+    .archive-timeline-box::after, .tag-timeline-wrapper::after {
+      background: #eee;
     }h1, h2, h3, h4, h5, h6 {
       color: #555;
     }
