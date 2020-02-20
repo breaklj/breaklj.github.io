@@ -236,7 +236,9 @@ blockquote:before {
   margin: 0 0 25px 0;
 }
 .sidebar-item-social {
-  margin-top: 20px;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px dotted #ccc;
 }
 .sidebar-item-social > .social-item {
   position: relative;
@@ -287,10 +289,9 @@ blockquote:before {
 }
 .friends-title {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 14px;
   font-weight: 600;
-  border-top: 1px dotted #ccc;
 }
 .friends-box a {
   max-width: 280px;
@@ -1885,6 +1886,9 @@ blockquote:before {
 }
 body {
       background-color: #eee;
+    }
+    .nav-toggle .line {
+      background-color: #eee !important;
     }.header {
         width: 1000px;
         margin: 0 auto;
@@ -1902,9 +1906,6 @@ body {
     }
     .next-md-body h1, .next-md-body h2 {
       border-bottom-color: #555;
-    }
-    .archive-timeline-box::after, .tag-timeline-wrapper::after {
-      background: #555;
     }h1, h2, h3, h4, h5, h6 {
       color: #555;
     }
@@ -1984,8 +1985,11 @@ body {
       .site-meta {
         background: #000 !important;
       }
+      .head-top-line {
+        background: #000 !important;
+      }
     .brand {
-      background: #000 !important;
+      background: #000;
     }
     .main-title {
       color: #FFF;
