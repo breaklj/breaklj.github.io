@@ -2,14 +2,14 @@
 <html>
   <head>
       <meta charset="UTF-8"/>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="keywords" content="个人博客">
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
 <title>Break&#39;s blog</title>
-<link rel="shortcut icon" href="https://breaklj.github.io//favicon.ico?v=1583404467506">
-<link rel="stylesheet" href="https://breaklj.github.io//styles/main.css">
-
+<link rel="shortcut icon" href="/favicon.ico?v=1584780096544">
+<link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/pisces.css">
 
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -24,6 +24,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
+
+
 
   </head>
   <body>
@@ -57,7 +59,8 @@
           
             <li class="nav-item ">
               
-                <a href="/">
+              
+                <a href="/" target="_self">
                   <i class="fa fa-home"></i> 首页
                 </a>
               
@@ -65,7 +68,8 @@
           
             <li class="nav-item ">
               
-                <a href="/archives">
+              
+                <a href="/archives" target="_self">
                   <i class="fa fa-archive"></i> 时间
                 </a>
               
@@ -73,7 +77,8 @@
           
             <li class="nav-item nav-item-active">
               
-                <a href="/tags">
+              
+                <a href="/tags" target="_self">
                   <i class="fa fa-tags"></i> 标签
                 </a>
               
@@ -81,7 +86,8 @@
           
             <li class="nav-item ">
               
-                <a href="/post/about">
+              
+                <a href="/post/about" target="_self">
                   <i class="fa fa-user"></i> 本人
                 </a>
               
@@ -124,13 +130,13 @@
       
       <div class="section-layout  pisces">
         <div class="section-layout-wrapper">
-          <div class="sidebar">
+          <div id="sidebarMeta" class="sidebar">
     
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://breaklj.github.io//images/avatar.png"/>
     <p class="site-author-name">Break&#39;s blog</p>
-    <p class="site-description right-motion">这个人很懒，什么都不想写...</p>
+    <p class="site-description right-motion">温故而知新</p>
   </div>
   <div class="sidebar-item side-item-stat right-motion">
     <div class="sidebar-item-box">
@@ -168,6 +174,20 @@
 
 </div>
 </div>
+<script>
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'pisces';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
+      }
+    });
+  }
+  </script>
           <div class="section-box box-shadow-wrapper">
             <section class="section tags-section bg-color posts-expand">
               <div class="tags-box">
@@ -208,7 +228,7 @@
 </div>
 <script>
 
-  let fontStart = 12, fontEnd = 30, colorStart = '#ccc', colorEnd = '#111';
+  let fontStart = 12, fontEnd = 30, colorStart = '#666', colorEnd = '#000';
   let tags = document.querySelector('#tags').children;
   let counts = [];
   for(let i = 0; i < tags.length; i++) {
@@ -234,12 +254,12 @@
         disCount = 1;
       }
       let val = (sColorArr[c] - eColorArr[c]) / range * disCount;
-      if (val >= 255) {
+      if (val >= 100) {
         val = eColorArr[c];
       } else if (val <= 0) {
         val = sColorArr[c];
       }
-      arr[c] = Math.floor(255 - val);
+      arr[c] = Math.floor(val);
     }
     style += 'color: ' + toHex(arr);
     tags[i].style = style;
@@ -265,7 +285,7 @@
       <div class="footer-box">
   <footer class="footer">
     <div class="copyright">
-      © 2019-2020 <i class="fa fa-heart"></i> HsxyHao
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By HsxyHao
     </div>
     <div class="poweredby">
       Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
@@ -283,6 +303,44 @@
   </div>
   
   
+  
+    
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+  <div class="aplayer" id="aplayer"></div>
+  <input hidden id="player_cover" value="" />
+  <div class="music-list">
+  
+    
+    <input hidden value="口是心非,丫蛋蛋（马启涵） / 崔铭嘉,https://isure.stream.qqmusic.qq.com/C4000030oQZx0gMuDQ.m4a?guid=9875589286&amp;vkey=0DB1D406D5F340DA6D9AD9969EF848CAEE2C53542947124F550EC580BEA0A33C24FE905B80F9E1C201E67C403604C338D30D21E71BB18C09&amp;uin=6587&amp;fromtag=66," />
+  
+  </div>
+  <script>
+  let musics = document.querySelector('.music-list').children;
+  let mediaMusic = [];
+  let cover = document.querySelector('#player_cover').value;
+  for (let i = 0; i < musics.length; i++) {
+    let item = musics[i];
+    let splits = item.value.split(',');
+    mediaMusic.push({
+      name: splits[0],
+      artist: splits[1],
+      url: splits[2],
+      lrc: splits[3],
+      cover: cover
+    });
+  }
+  const ap = new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,
+      lrcType: 3,
+      listFolded: false,
+      listMaxHeight: 90,
+      audio: mediaMusic
+  });
+  </script>
+
+
   
 </div>
 <script>
