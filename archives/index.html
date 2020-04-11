@@ -8,9 +8,9 @@
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
 <title>Break&#39;s blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1586594284615">
+<link rel="shortcut icon" href="/favicon.ico?v=1586595284222">
 <link rel="stylesheet" href="/styles/main.css">
-<link rel="stylesheet" href="/media/css/pisces.css">
+<link rel="stylesheet" href="/media/css/muse.css">
 
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -33,9 +33,9 @@
     <div class="head-top-line"></div>
     <div class="header-box">
       
-<div class=" pisces">
-  <header class="header  ">
-    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+<div class=" muse">
+  <header class="header bg-color ">
+    <div class="blog-header box-shadow-wrapper  " id="header">
       <div class="nav-toggle" id="nav_toggle">
         <div class="toggle-box">
           <div class="line line-top"></div>
@@ -57,6 +57,19 @@
       </div>
       <nav class="site-nav" id="site_nav">
         <ul id="nav_ul">
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/" target="_self">
+                  <i class="fa fa-home"></i> 首页
+                </a>
+              
+            </li>
           
             
             
@@ -97,25 +110,12 @@
               
             </li>
           
-            
-            
-              
-            
-            <li class="nav-item ">
-              
-              
-                <a href="/" target="_self">
-                  <i class="fa fa-home"></i> 首页
-                </a>
-              
-            </li>
-          
           
             
               <li class="nav-item ">
                 <a href="/friends" target="_self">
                   
-                    fa-ship友情链接
+                    <i class="fa fa-ship"></i> 友链
                   
                 </a>
               </li>
@@ -151,11 +151,11 @@
     </div>
     <div class="main-continer">
       
-      <div class="section-layout  pisces">
+      <div class="section-layout bg-color muse">
         <div class="section-layout-wrapper">
           <div id="sidebarMeta" class="sidebar">
     
-<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+<div class="sidebar-wrapper box-shadow-wrapper ">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
     <p class="site-author-name">Break&#39;s blog</p>
@@ -183,15 +183,6 @@
     </div>
   </div>
   
-    
-      <div class="sidebar-item">
-        <span class="site-item-rss">
-            <i class="fa fa-rss"></i>
-            <a href="https://breaklj.github.io//atom.xml" target="_blank">RSS</a>
-        </span>
-      </div>
-    
-  
   
     <div class="sidebar-item sidebar-item-social">
       <div class="social-item">
@@ -216,7 +207,7 @@
 </div>
 <script>
   let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'pisces';
+  let scheme = 'muse';
   let sidebarWrapper = document.querySelector('.sidebar-wrapper');
   if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
     document.addEventListener('scroll', function(e) {
@@ -292,54 +283,18 @@
   </footer>
   
   
-  <div class="pisces back-to-top" id="back_to_top">
+    <div class="drawer-box left" id="drawer_box">
+      <span class="muse-line muse-line-first"></span>
+      <span class="muse-line muse-line-middle"></span>
+      <span class="muse-line muse-line-last"></span>
+    </div>
+  
+  <div class="muse back-to-top" id="back_to_top">
     <i class="fa fa-arrow-up"></i>
     
-    <span class="scrollpercent">
-      <span id="back_to_top_text">0</span>%
-    </span>
-    
   </div>
   
   
-  
-    
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-  <div class="aplayer" id="aplayer"></div>
-  <input hidden id="player_cover" value="" />
-  <div class="music-list">
-  
-    
-    <input hidden value="口是心非,丫蛋蛋（马启涵） / 崔铭嘉,https://isure.stream.qqmusic.qq.com/C4000030oQZx0gMuDQ.m4a?guid=9875589286&amp;vkey=0DB1D406D5F340DA6D9AD9969EF848CAEE2C53542947124F550EC580BEA0A33C24FE905B80F9E1C201E67C403604C338D30D21E71BB18C09&amp;uin=6587&amp;fromtag=66," />
-  
-  </div>
-  <script>
-  let musics = document.querySelector('.music-list').children;
-  let mediaMusic = [];
-  let cover = document.querySelector('#player_cover').value;
-  for (let i = 0; i < musics.length; i++) {
-    let item = musics[i];
-    let splits = item.value.split(',');
-    mediaMusic.push({
-      name: splits[0],
-      artist: splits[1],
-      url: splits[2],
-      lrc: splits[3],
-      cover: cover
-    });
-  }
-  const ap = new APlayer({
-      container: document.getElementById('aplayer'),
-      fixed: true,
-      lrcType: 3,
-      listFolded: false,
-      listMaxHeight: 90,
-      audio: mediaMusic
-  });
-  </script>
-
-
   
 </div>
 <script>
