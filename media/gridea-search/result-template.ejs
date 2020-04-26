@@ -1,16 +1,38 @@
-  <h2 class="year"># 搜索</h2>
-    <% posts.forEach(function(post) { %>
-      <article class="item default grid-33 tablet-grid-50 np-mobile">
-        <a href="<%= post.link %>" class="thumb hover-effect">
-          <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('<% if (post.feature) { %><%= post.feature %><% } else { %><%= customConfig.featureImage %><%} %>');"></span>
-        </a>
-        <div class="info gradient-effect">
-          <time datetime="<%= post.dateFormat %>"><%= post.dateFormat %></time>
-          <h4 class="title usmall">
-            <a href="<%= post.link %>"><%= post.title %></a>
-          </h4>
+<div class="autopagerize_page_element">
+  <%posts.forEach(function(post){%>
+  <div class="content">
+    <div class="post animated fadeInDown">
+      <div class="post_title">
+        <h2>
+          <a href="<%= post.link %>"><%=post.title%></a>
+        </h2>
+      </div>
+      <div class="list">
+        <div class="post_content">
+          <p><%-post.searchedPreview%></p>
         </div>
-      </article>
-
-    <% }); %>
-    <div class="clear"></div>
+      </div>
+      <div class="post_footer">
+        <div class="meta">
+          <div class="info">
+            <div class="article-infos">
+              <i class="iconfont icon-words-sm"></i>
+              <span class="article-info"><%=post.stats.words%></span>
+              <i class="iconfont icon-time-sm"></i>
+              <span class="article-info"><%=post.dateFormat%></span>
+            </div>
+            <%if(post.tags.length > 0) { %>
+            <span class="field tags">
+              <i class="iconfont icon-tag-sm"></i>
+              <%post.tags.forEach(function(tag){%>
+              <a href="<%= tag.link %>" class="article-info"><%=tag.name%></a>
+              <%});%>
+            </span>
+            <%}%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%});%>
+          </div>
