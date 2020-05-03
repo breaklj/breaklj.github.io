@@ -245,10 +245,8 @@ pre > span.copy-code:hover {
   color: #fc6423;
   border: none;
   font-size: 16px;
-  border-top: 1px dotted #ccc;
-  border-bottom: 1px dotted #ccc;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .site-item-rss a {
   color: #fc6423;
@@ -268,7 +266,7 @@ pre > span.copy-code:hover {
   text-align: center;
   font-size: 0.8125em;
   color: #999;
-  margin: 0 0 25px 0;
+  margin: 0 0 10px 0;
 }
 .sidebar-item-social {
   margin-top: 5px;
