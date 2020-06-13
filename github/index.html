@@ -107,6 +107,14 @@ pcoded-navbar menu-light
                     </a>
                   </li>
                   
+                  
+                  <li>
+                    
+                    <a href="/github/" target="_self">
+                      <span class="pcoded-micon"><i class="feather icon-github"></i></span>Github
+                    </a>
+                  </li>
+                  
       </ul>
       <ul class="nav pcoded-inner-navbar ">
         <li class="nav-item pcoded-menu-caption">
@@ -226,6 +234,12 @@ pcoded-navbar menu-light
 				<ul class="notice-list" style="margin-top: 0px;">
 
 
+<li>
+	<a href="" target="_blank" title="温故而知新">
+		<i class="feather icon-volume-2"></i>温故而知新
+	</a>
+</li>
+
 
 				</ul>
 			</div>
@@ -271,7 +285,7 @@ pcoded-navbar menu-light
               var repoContainer = $('.github_page');//成功在class里的最后展示
               var loadingContainer = repoContainer.find(".loading-nav");//加载前字符
               var errorContainer = repoContainer.find(".error-nav");//加载失败字符
-              $.get("https://api.github.com/users/guugg/repos", function (result) {
+              $.get("https://api.github.com/users/breaklj/repos", function (result) {
                 if (result) {
                   loadingContainer.addClass("hide");
                   var ul = $("<div class='col-md-12'><div class=\"row row-sm text-center " +
