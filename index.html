@@ -28,6 +28,10 @@
 <!-- 目录索引 start-->
 <link href="https://breaklj.github.io/media/plugins/tocify/toc.css" rel="stylesheet">
 
+<!-- 评论 -->
+<script src="https://breaklj.github.io/media/js/plugins/av-min.js"></script>
+<script type="text/javascript" src="https://breaklj.github.io/media/js/plugins/Valine.Pure.js"></script>
+
 
 
 
@@ -102,16 +106,24 @@ pcoded-navbar menu-light
                   
                   <li>
                     
-                    <a href="/post/about/" target="_self">
-                      <span class="pcoded-micon"><i class="feather icon-user"></i></span>自述
+                    <a href="/github/" target="_self">
+                      <span class="pcoded-micon"><i class="feather icon-github"></i></span>Github
                     </a>
                   </li>
                   
                   
                   <li>
                     
-                    <a href="/github/" target="_self">
-                      <span class="pcoded-micon"><i class="feather icon-github"></i></span>Github
+                    <a href="/links/" target="_self">
+                      <span class="pcoded-micon"><i class="feather icon-users"></i></span>友链
+                    </a>
+                  </li>
+                  
+                  
+                  <li>
+                    
+                    <a href="https://breaklj.github.io/post/about/" target="_self">
+                      <span class="pcoded-micon"><i class="feather icon-globe"></i></span>自述
                     </a>
                   </li>
                   
@@ -742,6 +754,21 @@ window.IS_SLIDER = 1;
 
     // 重载函数
     function hljsLoino() {
+
+   // 评论
+    new Valine({
+      el: '#vcomments',
+      appId: '9ElN9sgwe**********-MdYXbMMI',
+      appKey: 'xgcNc4bz**********Bfjzm9',
+      placeholder: '我每天都坚持冒泡😘',
+      enableQQ: true,//QQ
+      boolean: true,//QQ
+      pageSize: false, // 文章列表
+      avatar: 'monsterid',//头像
+      visitor: true, // 阅读量统计
+      requiredFields: ['nick', 'mail'], //设置必填项
+      path: window.location.pathname // **请确保必须写该属性
+    });
 
 
   }
